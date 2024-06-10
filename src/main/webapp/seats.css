@@ -1,0 +1,144 @@
+
+ul {
+    color: rgb(255, 255, 128);
+    display: flex;
+    list-style-type: none;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 60px;
+    padding-inline-start: 0px;
+}
+li {
+ 
+    margin: 0px 10px;
+    border: 5px solid rgb(0, 0, 0);
+    padding: 5px 10px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.1rem;
+    border-radius: 20px;
+}
+li:hover {
+    cursor: pointer;
+}
+h1, h3{
+    margin-left: 10px;
+}
+.navigate{
+	width: 30px;
+	padding: 4px;
+	border: 2px solid rgb(0, 0, 0);
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+.navigate:hover{
+	padding: 4.5px;
+	border: 2px solid rgb(0, 0, 0);
+}
+.mainForm{
+    margin: 20px 10px;
+    display: grid;
+    grid-template-columns: repeat(2,250px);
+    grid-template-rows: repeat(3,50px) repeat(4,40px) repeat(2,1fr) 70px;
+    grid-template-areas:
+        'lblCusName txtCusName'
+        'lblPhoneNo txtPhoneNo'
+        'lblEmail txtEmail'
+        'lblSeats lblSeats'
+        'lblSeats lblSeats'
+        'lblSeats lblSeats'
+        'lblSeats lblSeats'
+        'chkSeats chkSeats'
+        'chkSeats chkSeats'
+        'btnSubmit btnSubmit';
+    justify-content: center;
+    align-items: center;
+}
+
+.seats{
+	
+    grid-area: chkSeats;
+    display: grid;
+    grid-template-columns: repeat(11,30px);
+    grid-template-rows: repeat(6,30px);
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#lblCusName{
+    grid-area: lblCusName;
+}
+#lblPhoneNo{
+    grid-area: lblPhoneNo;
+}
+#lblEmail{
+    grid-area: lblEmail;
+}
+#lblSeats{
+    grid-area: lblSeats;
+    line-height: 200%;
+    grid-area: lblSeats;
+
+}
+#cusName{
+    grid-area: txtCusName;
+}
+#phoneNo{
+    grid-area: txtPhoneNo;
+}
+#email{
+    grid-area: txtEmail;
+}
+#btnSubmit{
+    grid-area: btnSubmit;
+}
+input[type=text], input[type=tel], input[type=email]{
+    background-color: transparent;
+    color: rgb(255, 255, 128);
+    width: 250px;
+    height: 20px;
+    padding: 5px 10px;
+    border: 2px solid rgb(255, 255, 128);
+    outline: none;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus{
+    border: 3px solid rgb(255, 255, 128);
+}
+input[type=checkbox]{
+    display: none;
+}
+input[type=checkbox] + label {
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.5s;
+} 
+input[type=checkbox]:checked + label {
+    background-color: yellow;
+    color: rgb(255, 255, 128);
+}
+input[type=submit]{
+	height: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: transparent;
+    color: #D5CEA3;
+    padding: 5px 30px;
+    border: 2px solid rgb(255, 255, 128);
+    border-radius: 20px;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.submitForm input, .confirm{
+	margin: 10px 20px;
+}

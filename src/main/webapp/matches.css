@@ -1,0 +1,63 @@
+@charset "UTF-8";
+.matches{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.matches>.carousel {
+    margin: 10vh 0px;
+    width: 90vw;
+    height: 40vw;
+    position: relative;
+}
+
+.matches>.carousel-button {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    border: none;
+    font-size: 8rem;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: 0.5s color ease-in-out;
+    padding: 0px;
+}
+
+.matches>.carousel-button:hover {
+    color: #ffffff;
+}
+
+.matches>.carousel-button.prev {
+    left: 1%;
+}
+
+.matches>.carousel-button.next {
+    right: 1%;
+}
+
+.matches>.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity linear;
+    transition-delay: 0ms;
+}
+
+.matches>.slide[data-active] {
+    opacity: 1;
+    transition-delay: 100ms;
+    z-index: 1;
+}
+
+.matches>.slide>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
